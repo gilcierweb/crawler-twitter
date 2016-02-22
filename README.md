@@ -4,9 +4,9 @@ Baixe o projeto, depois abra o terminal e entre na pasta do projeto.
 
 ```shell
 
-rails new SumOne-gilcier-test-rails -d postgresql
+rails new crawler-twitter -d postgresql
 
-cd SumOne-gilcier-test-rails/
+cd crawler-twitter/
 
 bundle install
 
@@ -46,9 +46,14 @@ rake -T | grep tweets
 ```
 #### Crawler do Twitter
 
+Dentro da pasta do projeto crawler-twitter abra outro terminal e execute os comandos abaixo
+
 ```shell
+cd crawler-twitter/
+
 cd lib/crawler/
 
+#executar o crawler-twitter
 ruby twitter.rb
 
 ```

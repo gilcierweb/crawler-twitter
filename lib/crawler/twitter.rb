@@ -12,10 +12,10 @@ access_token = ENV['ACCESS_TOKEN']
 access_token_secret = ENV['ACCESS_TOKEN_SECRET']
 
 TweetStream.configure do |config|
-  config.consumer_key = consumer_key.strip
-  config.consumer_secret = consumer_secret.strip
-  config.oauth_token = access_token.strip
-  config.oauth_token_secret = access_token_secret.strip
+  puts config.consumer_key = consumer_key
+  config.consumer_secret = consumer_secret
+  config.oauth_token = access_token
+  config.oauth_token_secret = access_token_secret
   config.auth_method = :oauth
 end
 

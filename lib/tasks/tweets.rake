@@ -20,7 +20,7 @@ namespace :tweets do
     media = (total_tweets.to_f / total_tweets_time.to_f)
 
     # Média de tweets por horário | 12:00 -> 125, 13:00 -> 200, 15:00 -> 475, ... |
-    puts "Média de tweets por horário | #{time_init} - #{time_end} -> #{media}"
+    puts "Média de tweets por horário | #{time_init} - #{time_end} -> #{media.round(2)}"
 
   end
 

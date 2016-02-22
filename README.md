@@ -1,5 +1,7 @@
 #Test gilcier SumOne
 
+Baixe o projeto, depois abra o terminal e entre na pasta do projeto.
+
 ```shell
 
 rails new SumOne-gilcier-test-rails -d postgresql

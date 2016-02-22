@@ -39,7 +39,7 @@ module HomeHelper
         if media.blank?
           times_home << "#{time_init} Nao foi encontrado Tweets nesse horario no banco de dados"
         else
-          times_home << "#{time_init} -> #{media}"
+          times_home << "#{time_init} -> #{media.round(2)}"
         end
 
       end

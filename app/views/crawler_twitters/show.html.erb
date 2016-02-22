@@ -1,0 +1,22 @@
+<p>
+  <strong><%= t('twitter.form.field.content') %>:</strong>
+  <%= @crawler_twitter.content %>
+</p>
+
+<p>
+  <strong><%= t('twitter.form.field.user') %>:</strong>
+  <%= @crawler_twitter.user %>
+</p>
+
+<p>
+  <strong><%= t('twitter.form.field.tags') %>:</strong>
+  <%= @crawler_twitter.tags %>
+</p>
+
+<p>
+  <strong><%= t('twitter.form.field.publish') %>:</strong>
+  <%= @crawler_twitter.publish %>
+</p>
+
+<%= link_to t('action.edit'), edit_crawler_twitter_path(@crawler_twitter), class: 'btn btn-primary' %> |
+<%= link_to t('link.back'), crawler_twitters_path, class: 'btn btn-default' %>

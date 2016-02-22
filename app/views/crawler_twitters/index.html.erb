@@ -1,0 +1,33 @@
+<h1><%= t('twitter.title.index') %></h1>
+
+<table class="table table-responsive table-bordered">
+  <thead>
+  <tr>
+    <th><%= t('twitter.form.field.content') %></th>
+    <th><%= t('twitter.form.field.user') %></th>
+    <th><%= t('twitter.form.field.tags') %></th>
+    <th><%= t('twitter.form.field.publish') %></th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @crawler_twitters.each do |crawler_twitter| %>
+      <tr>
+        <td><%= crawler_twitter.content %></td>
+        <td><%= crawler_twitter.user %></td>
+        <td><%= crawler_twitter.tags %></td>
+        <td><%= crawler_twitter.publish %></td>
+        <td><%= link_to t('action.show'), crawler_twitter, class: 'btn btn-info' %></td>
+        <td><%= link_to t('action.edit'), edit_crawler_twitter_path(crawler_twitter), class: 'btn btn-primary' %></td>
+        <td><%= link_to t('action.destroy'), crawler_twitter, class: 'btn btn-danger', method: :delete, data: {confirm: t('action.confirm')} %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= paginate @crawler_twitters %>
+
+<br>
+
+<%# link_to t('twitter.title.new'), new_crawler_twitter_path, class: 'btn btn-success' %>

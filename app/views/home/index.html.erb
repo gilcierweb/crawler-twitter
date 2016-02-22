@@ -1,0 +1,32 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Crawler Twitter - Test Gilcier - SumOne</h1>
+    <p>Simples Crawler Twitter em Ruby e Ruby On Rails com Cadastro dos tweets no banco de dados PostgreSQL</p>
+    <p><%= link_to t('home.twitters'), crawler_twitters_path, class: "btn btn-success btn-lg" %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><h3 class="panel-title">Média de tweets por horário</h3></div>
+      <div class="panel-body">
+        <% average_times_home.each do |crawler_twitter| %>
+            <%= crawler_twitter %><br>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><h3 class="panel-title">Usuários com maior número de tweets</h3></div>
+      <div class="panel-body">
+        <% @crawler_twitters_user_most.each do |crawler_twitter| %>
+            <strong><%= link_to "@#{crawler_twitter.user}", "https://twitter.com/#{crawler_twitter.user}", title: "@#{crawler_twitter.user}", target: '_blank' %></strong>
+            com <strong><%= crawler_twitter.countuser %></strong> tweets<br>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

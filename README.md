@@ -1,4 +1,4 @@
-#Test gilcier SumOne
+#Crawler Twitter - GilcierWeb
 
 Baixe o projeto, depois abra o terminal e entre na pasta do projeto.
 
@@ -40,7 +40,7 @@ rake -T | grep tweets
 
 #rake tweets:average_time                # Average time for tweets :time_init, :time_end
 #rake tweets:average_time[:time_init,:time_end]                # Average time for tweetstweets :time_init, :time_end
-#rake tweets:average_time['14:00:00','14:59:59']                # Average time for tweetstweets :time_init, :time_end 
+#rake tweets:average_time['14:00:00','14:59:59']                # Average time for tweetstweets :time_init, :time_end
 #rake tweets:user_most                   # User with the most tweets
 
 ```

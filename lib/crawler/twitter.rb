@@ -19,13 +19,13 @@ TweetStream.configure do |config|
   config.auth_method = :oauth
 end
 
-puts 'Informe a palavra a ser pesquisada no twitter, pode ser uma ou mais palavras separadas por virgula ex: dilma, lula'
+puts 'Informe a palavra a ser pesquisada no twitter, pode ser uma ou mais palavras separadas por virgula ex: dilma, lula, ladrões, bandidos'
 
 params = gets.to_s.strip.downcase.chomp
 
 class CrawlerTwitter
 
-  def crawler_data(params = 'dilma, lula')
+  def crawler_data(params = 'dilma, lula, ladrões, bandidos')
 
     begin
 
